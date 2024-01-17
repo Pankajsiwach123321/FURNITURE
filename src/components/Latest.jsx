@@ -84,7 +84,7 @@ const Latest = () => {
     </div>
   ));
   return (
-    <div className="third">
+    <div className="third overflow-x-clip">
       <div className="max-w-[1341px] mx-auto px-3 md:pt-[80px] pt-[40px] lg:pt-[110px] relative">
         <span data-aos="fade-up" className="flex items-center gap-[11px]">
           <hr className="max-w-[96px] w-full h-[1px] bg-[#000000] border-t-[unset]" />
