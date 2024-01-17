@@ -38,7 +38,7 @@ const Testimonial = () => {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   return (
-    <div>
+    <div className="overflow-x-clip">
       <div className="max-w-[1341px] px-3 mx-auto pt-[109px]">
         <span data-aos="fade-down" className="flex items-center gap-2">
           <hr className="max-w-[96px] w-full h-[1px] bg-[#000000] border-t-[unset]" />

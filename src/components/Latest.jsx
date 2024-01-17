@@ -106,13 +106,13 @@ const Latest = () => {
         <div className="flex justify-center items-center gap-5">
           <span
             onClick={() => first?.current?.slickPrev()}
-            className=" 2xl:absolute 2xl:left-[-93px] left-[-55px] top-[60%] bg-white px-[15px] 2xl:px-[29px] py-[27px] 2xl:py-[41px] rounded-full drop-shadow-[2px_7px_16px_#00000014]"
+            className=" 2xl:absolute 2xl:left-[-93px] cursor-pointer left-[-55px] top-[60%] bg-white px-[15px] 2xl:px-[29px] py-[27px] 2xl:py-[41px] rounded-full drop-shadow-[2px_7px_16px_#00000014]"
           >
             <Left2 />
           </span>
           <span
             onClick={() => first?.current?.slickNext()}
-            className=" 2xl:absolute 2xl:right-[-93px] right-[-55px] top-[60%] bg-white px-[15px] 2xl:px-[29px] py-[27px] 2xl:py-[41px] rounded-full drop-shadow-[2px_7px_16px_#00000014]"
+            className=" 2xl:absolute 2xl:right-[-93px] cursor-pointer right-[-55px] top-[60%] bg-white px-[15px] 2xl:px-[29px] py-[27px] 2xl:py-[41px] rounded-full drop-shadow-[2px_7px_16px_#00000014]"
           >
             <Right2 />
           </span>
