@@ -9,7 +9,7 @@ const Offer = () => {
           <div data-aos="fade-up" className="md:w-1/2 w-full px-4 pt-6">
             <div className=" overflow-hidden group">
               <div
-                className={`bg-[url(./assets/images/festivaloffer1.webp)] group-hover:scale-[110%] duration-300 bg-no-repeat bg-size p-[32px_2px_71px_2px]`}
+                className={`bg-[url(./assets/images/festivaloffer1.webp)] group-hover:scale-[110%] duration-300 bg-no-repeat bg-cover bg-right sm:bg-size p-[32px_2px_71px_2px]`}
               >
                 <span
                   data-aos="fade-down"
@@ -38,7 +38,7 @@ const Offer = () => {
           <div data-aos="fade-down" className="md:w-1/2 w-full px-4 pt-6">
             <div className=" overflow-hidden group">
               <div
-                className={`bg-[url(./assets/images/festivaloffer2.webp)] group-hover:scale-[110%] duration-300 bg-no-repeat bg-size p-[32px_2px_71px_2px]`}
+                className={`bg-[url(./assets/images/festivaloffer2.webp)] group-hover:scale-[110%] duration-300 bg-no-repeat bg-cover bg-right sm:bg-size p-[32px_2px_71px_2px]`}
               >
                 <span
                   data-aos="fade-down"

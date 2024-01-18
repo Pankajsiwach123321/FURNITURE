@@ -7,12 +7,12 @@ export const Star = () => {
 export const Logo = () => {
     return (
         <svg className="max-sm:max-w-[40px]" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.08337 26.6875H15.25V44.4792H5.08337V26.6875Z" stroke="#BD7D41" stroke-width="4" stroke-linejoin="round" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M45.75 26.6875H55.9167V44.4792H45.75V26.6875Z" stroke="#BD7D41" stroke-width="4" stroke-linejoin="round" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.25 34.3125H45.75V44.4792H15.25V34.3125Z" stroke="#BD7D41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M10.1667 25.4167V10.1667H50.8334V25.4167" stroke="#BD7D41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M10.1667 45.75V50.8333" stroke="#BD7D41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M50.8334 45.75V50.8333" stroke="#BD7D41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M5.08337 26.6875H15.25V44.4792H5.08337V26.6875Z" stroke="#BD7D41" strokeWidth="4" strokeLinejoin="round" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M45.75 26.6875H55.9167V44.4792H45.75V26.6875Z" stroke="#BD7D41" strokeWidth="4" strokeLinejoin="round" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M15.25 34.3125H45.75V44.4792H15.25V34.3125Z" stroke="#BD7D41" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M10.1667 25.4167V10.1667H50.8334V25.4167" stroke="#BD7D41" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M10.1667 45.75V50.8333" stroke="#BD7D41" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M50.8334 45.75V50.8333" stroke="#BD7D41" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     )
 }

@@ -14,6 +14,11 @@ const SliderBar = () => {
   } else {
     document.body.classList.remove("overflow-hidden");
   }
+  const [search, setsearch] = useState(false);
+  function showsearch() {
+    setsearch(!search);
+  }
+  console.log(search);
   return (
     <div>
       <nav className="py-[15px]">
@@ -32,11 +37,12 @@ const SliderBar = () => {
             <div className="flex items-center gap-[17px] sm:gap-[40px]">
               <ul
                 className={`${
-                  navshow ? "max-md:left-0" : "max-md:left-[-100%]"
-                } flex items-center lg:gap-[55px] gap-[23px] duration-300 max-md:justify-center max-md:absolute max-md:top-0  max-md:w-full z-[2] max-md:h-full max-md:bg-[#253140] max-md:flex-col`}
+                  navshow ? "max-lg:left-0" : "max-lg:left-[-100%]"
+                } flex items-center lg:gap-[55px] gap-[23px] duration-300 max-lg:justify-center max-lg:absolute max-lg:top-0  max-lg:w-full z-[2] max-lg:h-full max-lg:bg-[#253140] max-lg:flex-col`}
               >
                 <li>
                   <Link
+                    onClick={show}
                     to="/"
                     className={`${
                       location.pathname === "/" &&
@@ -48,6 +54,7 @@ const SliderBar = () => {
                 </li>
                 <li>
                   <Link
+                    onClick={show}
                     to="/about"
                     className={`${
                       location.pathname === "/about" &&
@@ -59,6 +66,7 @@ const SliderBar = () => {
                 </li>
                 <li>
                   <Link
+                    onClick={show}
                     to="/shop"
                     className={`${
                       location.pathname === "/shop" &&
@@ -70,6 +78,7 @@ const SliderBar = () => {
                 </li>
                 <li>
                   <a
+                    onClick={show}
                     href="#"
                     className="font-roboto text-lg leading-normal font-normal text-white mynavhover webkitstroke"
                   >
@@ -81,9 +90,14 @@ const SliderBar = () => {
                 <li>
                   <a
                     href="#"
-                    className="font-roboto text-lg leading-normal font-normal text-white group"
+                    className="font-roboto sm:relative flex items-center gap-1 z-[1] text-lg leading-normal font-normal text-white group"
                   >
                     <svg
+                      onClick={showsearch}
+                      className={`${
+                        search &&
+                        "sm:absolute sm:right-[12px] sm:top-[18px] sm:z-[2]"
+                      }`}
                       width="19"
                       height="19"
                       viewBox="0 0 19 19"
@@ -96,6 +110,16 @@ const SliderBar = () => {
                         fill="white"
                       />
                     </svg>
+
+                    <input
+                      type="search"
+                      placeholder="search here...."
+                      className={` ${
+                        search
+                          ? "w-[200px] visible h-full duration-300"
+                          : "w-0 invisible h-0  absolute"
+                      }   p-[16px] max-sm:absolute max-sm:left-[12px] max-sm:z-[2] max-sm:max-h-[50px] max-sm:top-[75px]   lg:max-w-[150px] xl:max-w-full    left-0 top-0 border-[#BD7D41] border-[1px] bg-[#243040] outline-0`}
+                    />
                   </a>
                 </li>
                 <li>
@@ -123,7 +147,7 @@ const SliderBar = () => {
                 onClick={show}
                 className={`${
                   navshow ? " rotate-0 font-bold" : " rotate-90 font-medium"
-                } text-[31px] max-md:block hidden  text-white hover:text-[#BD7D41] duration-300  relative z-[2]`}
+                } text-[31px] max-lg:block hidden  text-white hover:text-[#BD7D41] duration-300  relative z-[2]`}
               >
                 {navshow ? "x" : "|||"}
               </button>
