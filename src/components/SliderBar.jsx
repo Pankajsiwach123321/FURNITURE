@@ -124,6 +124,7 @@ const SliderBar = () => {
                 </li>
                 <li>
                   <a
+                    // onClick={Opencart}
                     href="#"
                     className="font-roboto text-lg leading-normal font-normal text-white group"
                   >

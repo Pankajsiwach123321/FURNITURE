@@ -58,6 +58,28 @@ const myproductdata = [
   },
 ];
 const OurProduct = () => {
+  const [Products, setProducts] = useState(false);
+  const [cart, setcart] = useState([]);
+  function showcart(e) {
+    setProducts(true);
+    setcart([...cart, e]);
+  }
+  function closecart() {
+    setProducts(false);
+  }
+  function removecart(index) {
+    const leftcart = [...cart];
+    leftcart.splice(index, 1);
+    setcart(leftcart);
+    if (leftcart.length === 0) {
+      setProducts(false);
+    }
+  }
+  if (Products === true) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
   const [showmore, setshowmore] = useState(6);
   function showme() {
     if (showmore === 6) {
@@ -66,6 +88,7 @@ const OurProduct = () => {
       setshowmore(6);
     }
   }
+
   const myshow = myproductdata.slice(showmore).map((e, index) => (
     <div
       data-aos={e.aos}
@@ -94,6 +117,7 @@ const OurProduct = () => {
             ₹ 1200.00
           </p>
           <Button
+            function={() => showcart(e)}
             text="ADD TO CART"
             modify="!py-[10px] !px-[12px] !font-medium max-[650px]:text-lg"
           />
@@ -101,8 +125,52 @@ const OurProduct = () => {
       </div>
     </div>
   ));
+  const cartItems = cart.map((e, index) => (
+    <div key={index}>
+      <div className="mt-5 p-5 border-[2px] border-[#BD7D41] rounded-lg">
+        <img src={e.img} alt="product1" className="w-full  rounded-lg" />
+        <div className="flex items-center justify-between">
+          <p className=" text-black font-poppines text-xl leading-normal font-medium pt-2">
+            Single Sofa
+          </p>
+          <span className="flex items-center gap-[3px]">
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+          </span>
+        </div>
+        <div className=" flex justify-between items-center">
+          <p className=" font-poppines text-[24px] xl:text-[28px]  font-semibold leading-normal text-black ">
+            ₹ 1200.00
+          </p>
+          <Button
+            function={() => removecart(index)}
+            text="Remove"
+            modify="max-[650px]:text-[12px] py-[10px] px-[16px]"
+          />
+        </div>
+      </div>
+    </div>
+  ));
   return (
     <div>
+      <div
+        className={`${
+          Products ? "left-0" : "left-[-100%]"
+        } fixed py-3 px-2 duration-300 overflow-y-auto left-0 top-0 h-full cart   bg-[#685454] max-w-[520px] w-full z-[40]`}
+      >
+        <div className=" flex justify-between ">
+          <button
+            onClick={closecart}
+            className=" text-4xl font-poppines font-extrabold"
+          >
+            x
+          </button>
+        </div>
+        {cartItems}
+      </div>
       <div className="max-w-[1341px] mx-auto px-3 pt-[40px] md:pt-[80px] lg:pt-[135px]">
         <span data-aos="fade-down" className="flex items-center gap-[11px]">
           <hr className="max-w-[96px] w-full h-[1px] bg-[#000000] border-t-[unset]" />
